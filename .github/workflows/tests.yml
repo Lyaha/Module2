@@ -27,7 +27,9 @@ jobs:
           pip install pytest flake8
 
       - name: Run tests
-        run: pytest
+        run: |
+           python manage.py test
+
 
       - name: Check PEP8 compliance
         run: flake8
